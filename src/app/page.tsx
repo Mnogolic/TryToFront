@@ -130,9 +130,9 @@ export default function Home() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-semibold mb-8 text-left">Похожие курсы</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 ">
           {cards.map((card) => (
-            <div key={card.id} className="flex justify-left">
+            <div key={card.id}>
               <SecondCard
                 imageSrc={card.imageSrc}
                 category={card.category}

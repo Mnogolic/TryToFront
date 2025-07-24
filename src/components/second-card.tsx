@@ -22,18 +22,20 @@ export function SecondCard({
   dateRange = "6 мая 2022 – 6 мая 2025",
 }) {
   return (
-    <div className="w-[25.625rem] h-[26.625rem] bg-white rounded-lg shadow-md flex flex-col">
+    <div className=" bg-white rounded-lg h-full flex flex-col">
+      <div className="relative h-[14.375rem] rounded-t-lg overflow-hidden">
       <Image
+        fill
+        sizes="100%"
         src={imageSrc}
         alt={category}
-        width={410}
-        height={230}
-        className="w-full h-[14.375rem] object-cover rounded-t-lg"
+        className="object-cover"
       />
+     </div>
 
-      <div className="p-4 flex flex-col h-full">
+      <div className="p-4 flex flex-col flex-1">
         {/* Контейнер с метками */}
-        <div className="flex gap-3 items-center mb-2">
+        <div className="flex gap-3 items-center mb-2 flex-wrap">
           {/* Метка "Новый" */}
           <span className="inline-flex items-center justify-center h-6 border rounded-full px-2 text-sm font-medium text-[#E29400] border-[#E29400]">
             Новый
@@ -46,21 +48,25 @@ export function SecondCard({
         </div>
 
         {/* Блок с заголовком — фиксированная высота */}
-        <div className="mb-4 h-17 flex items-center">
+        <div className="mb-4 ">
           <h3 className="text-xl font-bold line-clamp-3">
             {title}
           </h3>
         </div>
 
-        {/* Нижняя панель с информацией */}
-        <div className="flex items-center pb-1 gap-4 text-sm text-black mt-auto font-semibold">
-          <div className="flex items-center space-x-1">
-            <List size={16} />
-            <span>{sections} {getSectionLabel(sections)} </span>
-          </div>
-          <div className="flex items-center space-x-1.5">
-            <Calendar size={16} />
-            <span>{dateRange}</span>
+        {/*Прикрепление к низу*/}
+        <div className="mt-auto">
+          {/*флекс-элементы должны идти в строку*/} 
+          <div className="flex gap-4 text-sm text-black font-semibold">
+            {/*расстояние между элементами*/} 
+            <div className="flex items-center gap-1">
+              <List size={16} />
+              <span className="flex">{sections} {getSectionLabel(sections)} </span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Calendar size={16} />
+              <span className="flex">{dateRange}</span>
+            </div>
           </div>
         </div>
       </div>
