@@ -1,19 +1,21 @@
-@import "tailwindcss"
+@import "tailwindcss";
+@plugin './hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 
-/*Добавь это для теста
-.bg-blue-500 {
-  background-color: #3b82f6;
+
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/700.css';
+
+@import '@fontsource/onest/400.css';
+@import '@fontsource/onest/500.css';
+@import '@fontsource/onest/700.css';
+
+
+.font-inter {
+  font-family: var(--font-inter);
 }
 
-.text-white {
-  color: #fff;
+@utility container {
+  @apply   mx-auto px-3 sm:px-6 lg:px-8 xl:px-10 2xl:px-12;
 }
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-} 
-*/

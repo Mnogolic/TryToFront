@@ -48,7 +48,7 @@ export function SecondCard({
         </div>
 
         {/* Блок с заголовком — фиксированная высота */}
-        <div className="mb-4 ">
+        <div className="mb-5 ">
           <h3 className="text-xl font-bold line-clamp-3">
             {title}
           </h3>
@@ -57,15 +57,15 @@ export function SecondCard({
         {/*Прикрепление к низу*/}
         <div className="mt-auto">
           {/*флекс-элементы должны идти в строку*/} 
-          <div className="flex gap-4 text-sm text-black font-semibold">
+          <div className="flex gap-4 text-sm text-black font-semibold flex-wrap">
             {/*расстояние между элементами*/} 
             <div className="flex items-center gap-1">
               <List size={16} />
-              <span className="flex">{sections} {getSectionLabel(sections)} </span>
+              <span className="whitespace-nowrap">{sections} {getSectionLabel(sections)} </span>
             </div>
             <div className="flex items-center gap-1">
               <Calendar size={16} />
-              <span className="flex">{dateRange}</span>
+              <span className="whitespace-nowrap">{dateRange}</span>  {/*whitespace-nowrap */}
             </div>
           </div>
         </div>
