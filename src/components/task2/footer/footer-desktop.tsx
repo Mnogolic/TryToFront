@@ -6,6 +6,7 @@ import { Moon, Search, MoonIcon,} from "lucide-react";
 import Link from "next/link";
 import { Input } from "@heroui/react";
 import {Checkbox} from "@heroui/react";
+import {Textarea} from "@heroui/react";
 
 
 
@@ -115,7 +116,7 @@ export default function FooterDesktop() {
         </div>
         <div className="grid w-full grid-cols-6 gap-6">
           <div className="col-span-2 flex flex-col lg:grid-cols-3">
-            <div className="flex mb-12 gap-12 items-center">
+            <div className="pt-6 pl-4 flex mb-12 gap-12 items-center">
               <div className="w-[7.1875rem] h-[3rem] flex ">
                 <Image
                 src="/images/icons/partners/mgu-logo.svg"
@@ -135,7 +136,7 @@ export default function FooterDesktop() {
               </div>
             </div>
 
-            <div className="flex gap-12 items-center">
+            <div className="flex pl-4 gap-12 items-center">
               <div className=" w-[7.1875rem] h-[3rem] flex items-center">
                 <Image
                 src="/images/icons/partners/Component_1.svg"
@@ -162,13 +163,14 @@ export default function FooterDesktop() {
 
             <div className="flex flex-col">
               <div className="flex mb-6">
-                <div className="flex w-full h-10.5 flex-wrap md:flex-nowrap gap-5.5">
+                <div className="flex w-full h-10.5 md:flex-nowrap gap-5.5">
                   <Input                   
                     type="text" 
                     name="name" 
                     id="name" 
                     placeholder="Ваше имя" 
                     className="w-full " 
+                    variant="bordered" 
                   />
                   <Input 
                     type="tel" 
@@ -176,18 +178,18 @@ export default function FooterDesktop() {
                     id="phone" 
                     placeholder="Номер телефона"
                     className="w-full" 
+                    variant="bordered" 
                   />
                 </div> 
               </div>
 
               <div className="flex h-32 mb-8"> 
                 {/* Не получается изменить высоту input`а */}
-                <Input 
-                  type="tel" 
-                  name="phone" 
-                  id="phone" 
-                  placeholder="Напишите нам"
-                  className="w-full h-32" 
+                <Textarea 
+                isClearable
+                placeholder="Enter your description"
+                minRows={6}
+                variant="bordered" 
                 />
               </div>
 
