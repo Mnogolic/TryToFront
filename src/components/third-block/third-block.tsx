@@ -8,6 +8,7 @@ interface Card {
   teacherFirstName: string;
   teacherSecondName: string;
   view: number;
+  imageSrcTeacher: string;
 }
 
 // imageSrc = "/images/webLearningGirl.png",
